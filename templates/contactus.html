@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}LoContact Us - Sandy Clinic{% endblock %}
+
+{% block content %}
+
+<body>
+    
+        <h1>Contact Us</h1>
+        
+     
+
+    <main>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Email: info@sandy.com</p>
+                <p>Phone: +44-123456789</p>
+            </div>
+            <div class="contact-form">
+                <h2>Contact Form</h2>
+                <form action="/submitcontact" method="POST">
+                    <label for="name">Your Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Your Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br>
+                    <input type="submit" value="Submit"></input>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        {% endblock %}
+    </footer>
+</body>

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Booked Appointments - Sandy Clinic{% endblock %}
+
+{% block content %}
+<body>    
+     
+    <table class="table-background " border="1" id="appointmentTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">No.</th>
+                <th onclick="sortTable(1)">Name</th>
+                <th onclick="sortTable(2)">Email</th>
+                <th onclick="sortTable(3)">Date</th>
+                <th onclick="sortTable(4)">Time Slot</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for appointment in appointments %}
+            <tr>
+                <td>{{ appointment[0] }}</td> 
+                <td>{{ appointment[2] }}</td> 
+                <td>{{ appointment[3] }}</td>  
+                <td>{{ appointment[4] }}</td>
+                <td>{{ appointment[5] }}</td>  
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <footer>
+        {% endblock %}
+    </footer>
+</body>
+</html>
+ 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sandy Clinic{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/clinicstyle.css') }}">
+    <script src="{{ url_for('static', filename='js/clinic.js') }}"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Website Logo" width="250" height="70">
+            </a>
+        </div>
+        <div class="clinic-name">
+             
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/book_appointment">Book an Appointment</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>                
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='img/facebook.png') }}" alt="Facebook"></a> 
+             <a href="https://twitter.com/"><img src="{{ url_for('static', filename='img/twitter.png') }}" alt="Twitter"></a></li>
+        </ul>
+        <p>&copy; 2024 Sandy Clinic</p>
+    </footer>
+</body>
+</html>

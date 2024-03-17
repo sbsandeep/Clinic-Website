@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Book an Appointment - Sandy Clinic{% endblock %}
+
+{% block content %}
+<body>
+     
+     
+    <main>
+        <form id="appointmentForm" method="POST">
+            <ol>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br>
+            <label for="time">Time Slot:</label><br>
+            <select id="time_slot" name="time_slot">
+                <option value="09:00">9:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="01:00">01:00 PM</option>
+                <option value="02:00">02:00 PM</option>
+                <option value="03:00">03:00 PM</option>
+                <option value="04:00">04:00 PM</option>
+            </select>
+        </ol>
+        <ol>
+            <input type="submit" value="Book Appointment" id="confirmationButton" >
+        </ol>
+        </form>
+        
+    </main>
+    <footer>
+        {% endblock %}
+    </footer>
+</body>
+</html>
+ 
